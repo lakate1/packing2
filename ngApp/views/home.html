@@ -1,0 +1,7 @@
+<h2>Home</h2>
+
+<a href="/add-movie">Make a list</a>
+
+<ul>
+  <li ng-repeat="l in vm.list">{{l.destination}} <a href="/edit-movie/{{l._id}}">EDIT</a> <a href="#" ng-click="vm.deleteList(l._id)">DELETE</a></li>
+</ul>

@@ -1,0 +1,7 @@
+<h2>Edit</h2>
+
+<a href="/add-movie">Edit list</a>
+
+<ul>
+  <li ng-repeat="m in vm.movies">{{m.title}} <a href="/edit-movie/{{m._id}}">EDIT</a> <a href="#" ng-click="vm.deleteMovie(m._id)">DELETE</a></li>
+</ul>
