@@ -2,7 +2,7 @@ import * as express from 'express';
 import passport = require('passport');
 import jwt = require('jsonwebtoken');
 
-import User from '/models/user';
+import User from '../models/user';
 let router = express.Router();
 
 router.post('/Register', (req, res, next) => {
