@@ -14,14 +14,14 @@ namespace myapp {
                 controllerAs: 'vm'
             })
             .state('edit', {
-                url: '/edit-movie/:id',
-                templateUrl: '/ngApp/views/editMovie.html',
+                url: '/edit-list/:id',
+                templateUrl: '/ngApp/views/editlist.html',
                 controller: myapp.Controllers.EditMovieController,
                 controllerAs: 'vm'
             })
             .state('add', {
-                url: '/add-movie',
-                templateUrl: '/ngApp/views/addMovie.html',
+                url: '/add-list',
+                templateUrl: '/ngApp/views/addList.html',
                 controller: myapp.Controllers.AddMovieController,
                 controllerAs: 'vm'
             })
