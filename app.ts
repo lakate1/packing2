@@ -13,7 +13,7 @@ import users from './routes/users';
 require('./models/user');
 require('./config/passport');
 
-import list from './api/movies';
+import list from './api/list';
 import Database from './db';
 
 Database.connect();
