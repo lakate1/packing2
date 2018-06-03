@@ -1,7 +1,11 @@
 <h1>Register</h1>
-<input type= "text" placeholder="username" ng-model= "vm.user.username" />
-<input type= "text" placeholder="password" ng-model= "vm.user.password" />
-<input type= "text" placeholder="confirm password" ng-model= "vm.user.confirmPassword" />
+<div class="register-page">
+<div class="registerform">
+<input type= "text" placeholder="Username" ng-model= "vm.user.username" />
+<input type= "text" placeholder="Password" ng-model= "vm.user.password" />
+<input type= "text" placeholder="Admin or user" ng-model= "vm.user.role" />
+<input type= "text" placeholder="Confirm password" ng-model= "vm.user.confirmPassword" />
 
 <button ng-click="vm.signup()">Submit</button>
+
 <a href= "/">Login</a>

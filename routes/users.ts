@@ -20,7 +20,7 @@ router.post('/Register', (req, res, next) => {
   });
 });
 
-router.post('/Login/Local',(req, res, next) => {
+router.post('/Login/local',(req, res, next) => {
 
   if(!req.body.username || !req.body.password){
     res.status(400).json({message:"Please fill in all fields."});
@@ -35,6 +35,7 @@ router.post('/Login/Local',(req, res, next) => {
     return res.status(400).send(info);
   })(req, res, next);
 });
+
 
 
 /* GET users listing. */

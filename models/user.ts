@@ -22,7 +22,7 @@ UserSchema.method("generateJWT", function(){
   return jwt.sign({
     id:this._id,
     username: this.username,
-    email: this.email
+    password: this.password
   }, 'SecretKey');
 });
 

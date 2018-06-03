@@ -14,7 +14,7 @@ namespace myapp.Controllers {
       }
     }
 
-    export class AddMovieController {
+    export class AddListController {
       public list
 
       public addList() {
@@ -29,7 +29,7 @@ namespace myapp.Controllers {
       }
     }
 
-    export class EditMovieController {
+    export class EditListController {
       public list
       public id
 
@@ -48,7 +48,7 @@ namespace myapp.Controllers {
       }
     }
 
-    export class RemoveMovieController {
+    export class RemoveListController {
       public list
 
       public addList() {
@@ -80,19 +80,13 @@ namespace myapp.Controllers {
 
       }
   
-    }
+    };
+    
+
 
     export class RegisterController {
       public user
-    
-      // register(){
-      //   console.log(this.user);
-      //   if(this.user.password !== this.user.confirmPassword){
-      //     alert("passwords dont match")
-      //   } else{
-      //     this.userService.saveUser(this.user)
 
-      //   }
       public signup() {
         this.userService.registerUser(this.user).then(() => {
           alert('signup successful, please login');
@@ -100,10 +94,11 @@ namespace myapp.Controllers {
       }
 
       public constructor(
-        private userService
-      ){
+        private userService,
+
+      ) {
 
       }
     }
-  }
 
+};

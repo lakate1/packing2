@@ -10,16 +10,16 @@ router.post('/', (req, res) => {
     res.end();
   })
 })
-
 router.get('/', (req, res) => {
+  //todo: get the user id
   database.db.collection('list').find().toArray().then((list)=>{
     res.json(list);
   })
 });
 
 router.delete('/:id', (req, res) => {
-  let movieId = new mongodb.ObjectID(req.params['id']);
-  database.db.collection('list').remove({_id: movieId}).then(() => {
+  let listId = new mongodb.ObjectID(req.params['id']);
+  database.db.collection('list').remove({_id: listId}).then(() => {
     res.end();
   })
 })

@@ -1,8 +1,13 @@
 <h1>Login</h1>
-<input type="text" placeholder="username" ng-model="vm.userInfo.username"/>
-<input type="password" placeholder="password" ng-model="vm.userInfo.password"/>
+<div class="login-page">
+<div class="form">
 
+<input type="text" placeholder="Username" ng-model="vm.userInfo.username"/>
+<input type="password" placeholder="Password" ng-model="vm.userInfo.password"/>
 <button type="button" ng-click="vm.login()">Login</button>
 
-<!-- <button>Submit</button> -->
+<div class="newaccount">
 <a href= "/register">New account</a>
+</div>
+</div>
+</div>

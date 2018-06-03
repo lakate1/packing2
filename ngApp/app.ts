@@ -16,13 +16,13 @@ namespace myapp {
             .state('edit', {
                 url: '/edit-list/:id',
                 templateUrl: '/ngApp/views/editlist.html',
-                controller: myapp.Controllers.EditMovieController,
+                controller: myapp.Controllers.EditListController,
                 controllerAs: 'vm'
             })
             .state('add', {
                 url: '/add-list',
                 templateUrl: '/ngApp/views/addList.html',
-                controller: myapp.Controllers.AddMovieController,
+                controller: myapp.Controllers.AddListController,
                 controllerAs: 'vm'
             })
             .state('notFound', {
@@ -43,8 +43,17 @@ namespace myapp {
                 controllerAs: 'vm'
 
 
-            });
+            })
+            .state('about', {
+                url: '/about',
+                templateUrl: '/ngApp/views/about.html',
+                // controller: myapp.Controllers.AboutController,
+                controllerAs: 'vm'
 
+
+            })
+            
+            
         // Handle request for non-existent route
         $urlRouterProvider.otherwise('/notFound');
 

@@ -1,0 +1,215 @@
+/*home page*/
+ body {
+    background-image: url(https://cdn.grindtv.com/uploads/2015/02/shutterstock_242371765.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  h1 {
+    color: white;
+    font-size: 40px;
+    font-family: comic sans ms;
+    text-align: center;
+  }
+  h2{
+    color: white;
+    font-size: 30px;
+    font-family: comic sans ms;
+    text-align: center;
+
+  
+  }
+  h3 {
+    color: white;
+    font-size: 20px;
+    font-family: comic sans ms;
+    text-align: center;
+
+  }
+  .form {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+  } 
+  /*login form*/
+  .form input {
+    font-family: "Roboto" , Sans-serif;
+    outline: 1;
+    background: f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .form button {
+    font-family: "Roboto" , Sans-serif;
+    text-transform: uppercase;
+    outline: 0%;
+    background: black;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+  
+  }
+  .form button:hover,.form button:active {
+    background: orange;
+  
+  }
+  .newaccount {
+      color: black;
+      text-align: center;
+      font-size: 30px;
+    
+
+  } 
+  /*register form*/
+  .registerform {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+  }
+  
+  .registerform input {
+    font-family: "Roboto" , Sans-serif;
+    outline: 1;
+    background: f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .registerform button {
+    font-family: "Roboto" , Sans-serif;
+    text-transform: uppercase;
+    outline: 0%;
+    background: black;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+  
+  }
+  .form button:hover,.form button:active {
+    background: orange;
+  
+  } 
+  
+  /*footer*/
+  footer { 
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px 16px; 
+    position: absolute;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+  
+  }
+  ul {
+    list-style-type: none;
+    padding: 20px 16px; 
+     overflow: hidden;
+     background-color: black;
+ }
+ 
+ li a {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 20px 16px;
+     text-decoration: none;
+     font-size: 20px;
+     font-family: fantasy;
+     
+ }
+ 
+ li {
+   float: left;
+ }
+ 
+ li a:hover {
+   background-color: #111;
+   background: orange;
+ 
+ } 
+ /*about page*/
+ #h1 {
+    text-align: center;
+    color: black;
+    font-family: comic sans ms;
+    font-size: 16px;
+  }
+  #paragraph {
+    font-family: comic sans ms;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .text{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: comic sans ms;
+    font-size: 40px;
+    padding: 15px;
+  } 
+ 
+  /* add-list page */
+  .addform {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+  }
+  
+  .addform input {
+    font-family: "Roboto" , Sans-serif;
+    outline: 1;
+    background: f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .addform button {
+    font-family: "Roboto" , Sans-serif;
+    text-transform: uppercase;
+    outline: 0%;
+    background: black;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+  
+  }
+  .addform button:hover,.addform button:active {
+    background: orange;
+  
+  } 
