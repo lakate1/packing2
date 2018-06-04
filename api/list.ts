@@ -2,9 +2,10 @@ import * as express from 'express';
 import * as mongodb from 'mongodb';
 import database from '../db';
 let router = express.Router();
-
+/* This route needs to be autherized */
 router.post('/', (req, res) => {
   let list = req.body;
+  //list.userid = req.user.id
   list._id = new mongodb.ObjectID(req.body.id);
   database.db.collection('list').save(req.body).then((newList) => {
     res.end();

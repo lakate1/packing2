@@ -19,7 +19,7 @@ namespace myapp.Controllers {
 
       public addList() {
         // console.log(this.list)
-        this.listService.saveList(this.list);
+        this.listService.saveList(this.list, /*pass jwt token to this*/);
       }
 
       public constructor(
@@ -67,6 +67,7 @@ namespace myapp.Controllers {
       public userInfo
 
       public login() {
+        // You need to take this token and send it with every HTTP request to a authorized backend route
         this.userService.loginUser(this.userInfo).then((data) => {
           this.$window.localStorage.setItem("token", JSON.stringify(data.token));
           alert('login successful');
@@ -100,5 +101,5 @@ namespace myapp.Controllers {
 
       }
     }
-
+    
 };

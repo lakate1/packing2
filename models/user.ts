@@ -26,4 +26,5 @@ UserSchema.method("generateJWT", function(){
   }, 'SecretKey');
 });
 
+
 export default mongoose.model('User', UserSchema);

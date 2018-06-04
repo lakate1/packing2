@@ -2,7 +2,7 @@ namespace myapp.Services {
   export class ListService {
     public ListResource
 
-    public saveList(list) {
+    public saveList(list/*takes token and sends to resource*/) {
       return this.ListResource.save(list);
     }
 
@@ -17,7 +17,7 @@ namespace myapp.Services {
     public constructor(
       public $resource
     ) {
-      this.ListResource = $resource('/api/list/:id');
+      this.ListResource = $resource('/api/list/:id'/*This endpoint needs to be autherized and given the token*/);
     }
   }
 
@@ -41,6 +41,7 @@ namespace myapp.Services {
     }
 
   }
+
     
   
   angular.module('myapp').service('listService', ListService);
