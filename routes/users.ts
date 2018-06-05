@@ -10,7 +10,7 @@ router.post('/Register', (req, res, next) => {
   let user:any = new User();
   user.username = req.body.username;
   user.setPassword(req.body.password);
-  user.role(req.body.userrole);
+  user.role= req.body.userrole;
 
   user.save(function(err, newUser){
     if(err){
@@ -40,8 +40,12 @@ router.post('/Login/local', (req, res, next) => {
 
 //this needs to be changed to get all lists who's userId matches the Id of the user logged in 
 /* GET users listing. */
-router.get('/list', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.send('respond with a resource');
+  let key = 'Userid, Destination, Season, Item 1, Item 2, Item 3';
+  localStorage.setItem(key, 'Value');
+  let myItem = localStorage.getItem(key);  
+
 });
 
 export default router;

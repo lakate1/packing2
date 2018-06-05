@@ -1,4 +1,4 @@
-/*home page*/
+/*home page image and h classes*/
  body {
     background-image: url(https://cdn.grindtv.com/uploads/2015/02/shutterstock_242371765.jpg);
     height: 100vh;
@@ -26,7 +26,8 @@
     text-align: center;
 
   }
-  .form {
+  /* Home page lists*/
+  .homelist {
     position: relative;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
@@ -34,16 +35,62 @@
     margin: 0 auto 100px;
     padding: 45px;
     text-align: center;
-  } 
-  /*login form*/
-  .form input {
     font-family: "Roboto" , Sans-serif;
     outline: 1;
-    background: f2f2f2;
     width: 100%;
     border: 0;
     margin: 0 0 15px;
     padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+/* add-list page */
+.addlistform {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+
+.addlistform input {
+  font-family: "Roboto" , Sans-serif;
+  outline: 1;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.addlistform button {
+  font-family: "Roboto" , Sans-serif;
+  text-transform: uppercase;
+  outline: 0%;
+  background: black;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+.addlistform button:hover,.form button:active {
+  background: orange;
+
+} 
+  /*login form*/
+  .form input {
+    font-family: "Roboto" , Sans-serif;
+    outline: 1;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px; 
+    padding: 5px; 
     box-sizing: border-box;
     font-size: 14px;
   }
@@ -60,6 +107,15 @@
     cursor: pointer;
   
   }
+  .form {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+  } 
   .form button:hover,.form button:active {
     background: orange;
   
@@ -106,9 +162,14 @@
     cursor: pointer;
   
   }
-  .form button:hover,.form button:active {
+  .registerform button:hover,.form button:active {
     background: orange;
-  
+
+  }
+  .login {
+      color: black;
+      text-align: center;
+      font-size: 30px;
   } 
   
   /*footer*/
@@ -129,8 +190,8 @@
     list-style-type: none;
     padding: 20px 16px; 
      overflow: hidden;
-     background-color: black;
- }
+     background-color: rgba(0, 0, 0, 0.5);
+    }
  
  li a {
      display: block;
@@ -174,42 +235,4 @@
     padding: 15px;
   } 
  
-  /* add-list page */
-  .addform {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-  }
   
-  .addform input {
-    font-family: "Roboto" , Sans-serif;
-    outline: 1;
-    background: f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 5px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
-  .addform button {
-    font-family: "Roboto" , Sans-serif;
-    text-transform: uppercase;
-    outline: 0%;
-    background: black;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-  
-  }
-  .addform button:hover,.addform button:active {
-    background: orange;
-  
-  } 
