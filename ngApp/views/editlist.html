@@ -1,12 +1,14 @@
 <h2>Edit list items</h2>
 
-<input type="text" placeholder="new Destination" ng-model="vm.list.destination" />
-<input type="text" placeholder="new Season" ng-model="vm.list.season" />
-<input type="text" placeholder="new Item1" ng-model="vm.list.item1" />
-<input type="text" placeholder="new Item2" ng-model="vm.list.item2" />
-<input type="text" placeholder="new Item3" ng-model="vm.list.item3" />
+<div class="editform">
+<input type="text" placeholder="New Destination" ng-model="vm.list.destination" />
+<input type="text" placeholder="New Season" ng-model="vm.list.season" />
+<input type="text" placeholder="New Item1" ng-model="vm.list.item1" />
+<input type="text" placeholder="New Item2" ng-model="vm.list.item2" />
+<input type="text" placeholder="New Item3" ng-model="vm.list.item3" />
+</div>
 
-
+<div class ="editform button">
 <button type="button" ng-click="vm.editList()">Edit List</button>
-
+</div>
 

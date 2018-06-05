@@ -40,7 +40,7 @@ router.post('/Login/local', (req, res, next) => {
 
 //this needs to be changed to get all lists who's userId matches the Id of the user logged in 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/list', function(req, res, next) {
   res.send('respond with a resource');
   let key = 'Userid, Destination, Season, Item 1, Item 2, Item 3';
   localStorage.setItem(key, 'Value');
