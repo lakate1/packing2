@@ -6,8 +6,8 @@ namespace myapp.Services {
       return this.ListResource.save(list);
     }
 
-    public getList() {
-      return this.ListResource.query();
+    public getList(id) {
+      return this.ListResource.query({id: id});
     }
 
     public removeList(id) {

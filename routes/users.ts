@@ -7,10 +7,11 @@ let router = express.Router();
 
 // POST - /Register this needs to be changed to save the user role
 router.post('/Register', (req, res, next) => {
+
   let user:any = new User();
   user.username = req.body.username;
+  user.role = req.body.role;
   user.setPassword(req.body.password);
-  user.role= req.body.userrole;
 
   user.save(function(err, newUser){
     if(err){
@@ -42,7 +43,7 @@ router.post('/Login/local', (req, res, next) => {
 /* GET users listing. */
 router.get('/list', function(req, res, next) {
   res.send('respond with a resource');
-  let key =   'Userid,Destination, Season, Item 1, Item 2, Item 3';
+  let key =   'Userid, Destination, Season, Item 1, Item 2, Item 3';
   localStorage.setItem(key, 'Value');
   let myItem = localStorage.getItem(key);  
 

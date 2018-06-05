@@ -10,7 +10,9 @@ namespace myapp.Controllers {
       constructor(
         private listService
       ) {
-        this.list = this.listService.getList();
+        let authToken = window.localStorage.token;
+        let payload = (authToken) ? JSON.parse(window.atob(authToken.split('.')[1])) : null;
+        this.listService.getList(payload.id)
       }
     }
 
@@ -19,7 +21,11 @@ namespace myapp.Controllers {
 
       public addList() {
         // console.log(this.list)
-        this.listService.saveList(this.list, /*pass jwt token to this*/);
+        let authToken = window.localStorage.token;
+        let payload = (authToken) ? JSON.parse(window.atob(authToken.split('.')[1])) : null;
+        this.list.userId = payload.id;
+        this.listService.saveList(this.list);
+
       }
 
       public constructor(

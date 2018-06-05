@@ -1,19 +1,32 @@
 import * as express from 'express';
 import * as mongodb from 'mongodb';
 import database from '../db';
+import Packing from '../models/packing';
+
 let router = express.Router();
 /* This route needs to be autherized */
 router.post('/', (req, res) => {
-  let list = req.body;
-  //list.userid = req.user.id
-  list._id = new mongodb.ObjectID(req.body.id);
-  database.db.collection('list').save(req.body).then((newList) => {
-    res.end();
+  
+  let list:any = new Packing();
+  list.destination = req.body.list.destination;
+  list.season = req.body.list.season;
+  list.item1 = req.body.list.item1;
+  list.item2 = req.body.list.item2;
+  list.item3 = req.body.list.item3;
+  list.postedBy = req.body.list.userId
+  list.save(function(err, newList){
+    if(err){
+    res.send(err);
+    }
+    res.json({message: "Registration complete. Please login."})
   })
-})
-router.get('/', (req, res) => {
+
+});
+
+router.get('/:id', (req, res) => {
   //todo: get the user id
-  database.db.collection('list').find().toArray().then((list)=>{
+  database.db.collection('list').find({userId: req.params.id}).toArray().then((list)=>{
+    console.log(list);
     res.json(list);
   })
 });
