@@ -4,6 +4,8 @@ let PackingSchema = new mongoose.Schema({
     destination : {type:String, lowercase: true},
     season : String,
     items: {type: Array,},
-    userid: {type: String, required: true}
-});
+    postedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+  }});
   export default mongoose.model('Packing', PackingSchema);
