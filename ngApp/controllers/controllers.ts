@@ -12,8 +12,7 @@ namespace myapp.Controllers {
       ) {
         let authToken = window.localStorage.token;
         let payload = (authToken) ? JSON.parse(window.atob(authToken.split('.')[1])) : null;
-        this.listService.getList(payload.id)
-      }
+        this.list = this.listService.getList(payload.id);     }
     }
 
     export class AddListController {

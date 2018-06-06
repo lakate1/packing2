@@ -1,5 +1,5 @@
 /*home page image and h classes*/
- body {
+  body {
     background-image: url(https://cdn.grindtv.com/uploads/2015/02/shutterstock_242371765.jpg);
     height: 100vh;
     background-size: cover;
@@ -45,7 +45,7 @@
     font-size: 14px;
   }
 /*editlist page*/
-.editform {
+ .editform {
   position: relative;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
@@ -81,7 +81,7 @@
 .editform button:hover,.form button:active {
   background: orange;
 
-} 
+}  
 
   
 /* add-list page */
@@ -274,4 +274,4 @@
     padding: 15px;
   } 
  
-  
+   

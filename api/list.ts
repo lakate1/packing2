@@ -1,41 +1,59 @@
 import * as express from 'express';
 import * as mongodb from 'mongodb';
+import * as mongoose from 'mongoose';
 import database from '../db';
 import Packing from '../models/packing';
 
 let router = express.Router();
-/* This route needs to be autherized */
+
+//POST
 router.post('/', (req, res) => {
-  
   let list:any = new Packing();
-  list.destination = req.body.list.destination;
-  list.season = req.body.list.season;
-  list.item1 = req.body.list.item1;
-  list.item2 = req.body.list.item2;
-  list.item3 = req.body.list.item3;
-  list.postedBy = req.body.list.userId
+  list.destination = req.body.destination;
+  list.season = req.body.season;
+  list.item1 = req.body.item1;
+  list.item2 = req.body.item2;
+  list.item3 = req.body.item3;
+  list.postedBy = req.body.userId
   list.save(function(err, newList){
     if(err){
     res.send(err);
     }
     res.json({message: "Registration complete. Please login."})
   })
-
 });
 
+//GET
 router.get('/:id', (req, res) => {
-  //todo: get the user id
-  database.db.collection('list').find({userId: req.params.id}).toArray().then((list)=>{
-    console.log(list);
-    res.json(list);
+  Packing.find({postedBy: req.params.id}).then((lists) => {
+    console.log(lists)
+    res.json(lists)
   })
 });
 
-router.delete('/:id', (req, res) => {
-  let listId = new mongodb.ObjectID(req.params['id']);
-  database.db.collection('list').remove({_id: listId}).then(() => {
-    res.end();
-  })
-})
+
+// router.delete('/:id', (req, res) => {
+//   let listId = new mongodb.ObjectID(req.params['id']);
+//   database.db.collection('list').remove({_id: listId}).then(() => {
+//     res.end();
+//   })
+// })
+
+router.delete('/list/:id', (req, res) => {
+
+	// mongoose //
+	Packing.deleteOne({_id: req.params.id}, (err) => {
+		if(err) {
+			res.sendStatus(500)
+		} else {
+			res.sendStatus(200)
+		}
+	})
+
+});
+
+
+
+
 
 export default router;
