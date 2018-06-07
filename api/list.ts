@@ -32,14 +32,7 @@ router.get('/:id', (req, res) => {
 });
 
 
-// router.delete('/:id', (req, res) => {
-//   let listId = new mongodb.ObjectID(req.params['id']);
-//   database.db.collection('list').remove({_id: listId}).then(() => {
-//     res.end();
-//   })
-// })
-
-router.delete('/list/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
 
 	// mongoose //
 	Packing.deleteOne({_id: req.params.id}, (err) => {
