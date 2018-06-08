@@ -27,23 +27,58 @@
 
   }
   /* Home page lists*/
-  .homebutton{
-  position: relative;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center;
-  font-size: 14px;
+  #homebutton {
+    font-family: "Roboto" , Sans-serif;
+    text-transform: uppercase;
+    outline: 0%;
+    background: black;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
 
   }
   #homelist {
     margin: auto;
     width: 50%;
-    border: 3px solid green;
     padding: 10px;
-    background-color: white;
+    position: relative;
+    font-family: cursive;
+    text-align: center;
+    color: white;
+    font-size: 30px;  
+  }
+  #edit {
+    font-family: "Roboto" , Sans-serif;
+    text-transform: uppercase;
+    outline: 0%;
+    /* background: black; */
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    
+
+  }
+  #delete {
+    font-family: "Roboto" , Sans-serif;
+    text-transform: uppercase;
+    outline: 0%;
+    /* background: black; */
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+
+  }
+  .veritcal {
+    background-color: black;
   }
   
 /*editlist page*/
@@ -275,5 +310,5 @@
     font-size: 40px;
     padding: 15px;
   } 
- 
+  
    

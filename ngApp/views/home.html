@@ -1,10 +1,7 @@
 <h1>Create a new list</h1>
 
-<div class= "homebutton">
-<a href="/add-list">Make a list</a>
+<a href="/add-list" id= "homebutton">Make a list</a>
 </div>
-<div id="homelist">
 <ul>
-  <li ng-repeat="l in vm.list">{{l.destination}},{{l.season}},{{l.item1}},{{l.item2}},{{l.item3}}<a href="/edit-list/{{l._id}}">EDIT</a><a href="#" ng-click="vm.deleteList(l._id)">DELETE</a></li>
+  <li ng-repeat="l in vm.list" id= "homelist">{{l.destination}}</br>{{l.season}}</br>{{l.item1}}</br>{{l.item2}}</br>{{l.item3}}<a href="/edit-list/{{l._id}}" id= "edit">EDIT</a><a href="#" ng-click="vm.deleteList(l._id)" id= "delete">DELETE</a></li>
 </ul>
-</div>

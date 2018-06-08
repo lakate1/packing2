@@ -23,6 +23,22 @@ router.post('/', (req, res) => {
   })
 });
 
+//Put
+router.put('/:id', (req, res) => {
+  let list:any = new Packing();
+  list.destination = req.body.destination;
+  list.season = req.body.season;
+  list.item1 = req.body.item1;
+  list.item2 = req.body.item2;
+  list.item3 = req.body.item3;
+  list.postedBy = req.body.userId
+  list.save(function(err, newList){
+    if(err){
+    res.send(err);
+    }
+  })
+});
+
 //GET
 router.get('/:id', (req, res) => {
   Packing.find({postedBy: req.params.id}).then((lists) => {
@@ -31,7 +47,7 @@ router.get('/:id', (req, res) => {
   })
 });
 
-
+//DELETE
 router.delete('/:id', (req, res) => {
 
 	// mongoose //

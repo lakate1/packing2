@@ -5,6 +5,9 @@ namespace myapp.Services {
     public saveList(list/*takes token and sends to resource*/) {
       return this.ListResource.save(list);
     }
+    public updateList(list) {
+      return this.ListResource.save(list);
+    }
 
     public getList(id) {
       return this.ListResource.query({id: id});
