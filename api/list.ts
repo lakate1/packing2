@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
   list.item2 = req.body.item2;
   list.item3 = req.body.item3;
   list.postedBy = req.body.userId
-  list.save(function(err, newList){
+  list.save(function (err, newList){
     if(err){
     res.send(err);
     }
@@ -23,26 +23,36 @@ router.post('/', (req, res) => {
   })
 });
 
-//Put
-router.put('/:id', (req, res) => {
-  let list:any = new Packing();
-  list.destination = req.body.destination;
-  list.season = req.body.season;
-  list.item1 = req.body.item1;
-  list.item2 = req.body.item2;
-  list.item3 = req.body.item3;
-  list.postedBy = req.body.userId
-  list.save(function(err, newList){
-    if(err){
-    res.send(err);
-    }
-  })
+// //PUT
+router.put('/', (req, res) => {
+
+	//mongoose
+	Packing.findByid('req.body.id', function (err, packings) {
+		if (err){			
+			res.sendStatus(500)
+		} else {
+		packings.destination = req.body.destination;
+		packings.season = req.body.season;
+		packings.item1 = req.body.item1;
+		packings.item2 = req.body.item2;
+		packings.item3 = req.body.item3;
+
+		packings.save(function (err, updatedPackings) {
+			if (err) {
+				res.sendStatus(500)
+			} else {
+				res.sendStatus(200)
+			}
+		})
+	}
 });
+});
+
 
 //GET
 router.get('/:id', (req, res) => {
   Packing.find({postedBy: req.params.id}).then((lists) => {
-    console.log(lists)
+    console.log("lists",lists)
     res.json(lists)
   })
 });
@@ -61,8 +71,6 @@ router.delete('/:id', (req, res) => {
 
 });
 
-
-
-
-
+// });
 export default router;
+

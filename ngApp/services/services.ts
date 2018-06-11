@@ -20,7 +20,7 @@ namespace myapp.Services {
     public constructor(
       public $resource
     ) {
-      this.ListResource = $resource('/api/list/:id'/*This endpoint needs to be autherized and given the token*/);
+      this.ListResource = $resource('/api/list/:id');
     }
   }
 
@@ -45,9 +45,11 @@ namespace myapp.Services {
 
   }
 
-    
+  
   
   angular.module('myapp').service('listService', ListService);
   angular.module('myapp').service('userService', UserService);
 
   }
+  
+  
