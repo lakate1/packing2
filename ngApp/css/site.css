@@ -26,6 +26,14 @@
     text-align: center;
 
   }
+
+  /*login page*/
+  h1 {
+    font-family: monospace;
+    color: orange;
+    font-size: 60px;
+  }
+  
   /* Home page lists*/
   #homebutton {
     font-family: "Roboto" , Sans-serif;

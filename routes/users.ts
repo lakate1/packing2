@@ -15,12 +15,10 @@ router.post('/Register', (req, res, next) => {
 
   user.save(function(err, newUser){
     if(err){
-      return next(err);
+      res.sendStatus(500);
     }
     res.json({message: "Registration complete. Please login."})
-  }).catch((err) => {
-    res.status(500);
-  });
+  })
 });
 
 router.post('/Login/local', (req, res, next) => {

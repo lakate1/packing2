@@ -8,7 +8,28 @@ let router = express.Router();
 
 //POST
 router.post('/', (req, res) => {
-  let list:any = new Packing();
+	if(req.body.id) {
+		Packing.findById(req.body.id, function (err, packings) {
+			if (err){			
+				res.sendStatus(500)
+			} else {
+				packings.destination = req.body.destination;
+				packings.season = req.body.season;
+				packings.item1 = req.body.item1;
+				packings.item2 = req.body.item2;
+				packings.item3 = req.body.item3;
+		
+				packings.save(function (err, updatedPackings) {
+					if (err) {
+						res.sendStatus(500)
+					} else {
+						res.sendStatus(200)
+					}
+				})
+		  }
+	  });
+	} else {
+	let list:any = new Packing();
   list.destination = req.body.destination;
   list.season = req.body.season;
   list.item1 = req.body.item1;
@@ -21,31 +42,8 @@ router.post('/', (req, res) => {
     }
     res.json({message: "Registration complete. Please login."})
   })
-});
 
-// //PUT
-router.put('/', (req, res) => {
-
-	//mongoose
-	Packing.findByid('req.body.id', function (err, packings) {
-		if (err){			
-			res.sendStatus(500)
-		} else {
-		packings.destination = req.body.destination;
-		packings.season = req.body.season;
-		packings.item1 = req.body.item1;
-		packings.item2 = req.body.item2;
-		packings.item3 = req.body.item3;
-
-		packings.save(function (err, updatedPackings) {
-			if (err) {
-				res.sendStatus(500)
-			} else {
-				res.sendStatus(200)
-			}
-		})
 	}
-});
 });
 
 

@@ -49,6 +49,7 @@ namespace myapp.Controllers {
       ) {
         if($stateParams) {
           this.id = $stateParams['id'];
+          console.log(this.id);
         }
       }
     }
